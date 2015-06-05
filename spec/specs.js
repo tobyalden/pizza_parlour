@@ -18,7 +18,7 @@ describe('Pizza', function() {
   describe("getDescription", function() {
     it("returns a description of a pizza", function() {
       var testPizza = new Pizza(13, ["red peppers", "pepperoni"]);
-      expect(testPizza.getDescription()).to.equal('13" pizza with red peppers, pepperoni');
+      expect(testPizza.getDescription()).to.equal('13" pizza with red peppers, pepperoni ($15)');
     });
   });
 

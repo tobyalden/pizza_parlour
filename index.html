@@ -10,42 +10,53 @@
   </head>
 
   <body>
-    <div class="container">
 
-      <h1>hey kids its pizza time</h1>
+      <div class="jumbotron">
+          <h1>Welcome to Emiliano Zapizza's!</h1>
+          <p class="lead">Place your order:<br></p>
 
+          <form id="pizza-order">
+            <div class="form-group">
 
-      <form id="pizza-order">
+              <label for="size-dropdown">Size:</label>
+              <select id="size-dropdown">
+                <option value="13">Small (13")</option>
+                <option value="15">Medium (15")</option>
+                <option value="17">Large (17")</option>
+              </select>
 
-        <label for="size-dropdown">Size:</label>
-        <select id="size-dropdown">
-          <option value="13">Small (13")</option>
-          <option value="15">Medium (15")</option>
-          <option value="17">Large (17")</option>
-        </select>
+              <label for="toppings-dropdown">Toppings:</label>
+              <select id="toppings-dropdown">
+                <option value="Pepperoni">Pepperoni</option>
+                <option value="Red Peppers">Red Peppers</option>
+                <option value="Mushrooms">Mushrooms</option>
+                <option value="Anchovies">Anchovies</option>
+                <option value="Sausage">Sausage</option>
+              </select>
 
-        <label for="toppings-dropdown">Toppings:</label>
-        <select id="toppings-dropdown">
-          <option value="Pepperoni">Pepperoni</option>
-          <option value="Red Peppers">Red Peppers</option>
-          <option value="Mushrooms">Mushrooms</option>
-          <option value="Anchovies">Anchovies</option>
-          <option value="Sausage">Sausage</option>
-        </select>
-        <button type="button" id="add-topping">Add Topping</button>
-        <button type="submit" id="add-pizza">Add Pizza</button>
-      </form>
+              <br>
 
-      <label for="toppings-list">Selected Toppings:</label>
-      <ul id="toppings-list">
+              <button type="button" id="add-topping">Add Topping</button>
+              <button type="submit" id="add-pizza">Add Pizza</button>
 
-      </ul>
+            </div>
 
-      <label for="pizza-list">Pizzas:</label>
-      <ol id="pizza-list">
+          </form>
+        </div>
 
-      </ol>
+        <div id="result">
+          <label for="toppings-list">Selected Toppings:</label>
+          <ul id="toppings-list">
 
-    </div>
+          </ul>
+
+          <label for="pizza-list">Pizzas:</label>
+          <ol id="pizza-list">
+
+          </ol>
+
+          <h3 id="total-cost">Total Cost:</h3>
+        </div>
+
   </body>
 </html>

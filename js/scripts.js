@@ -10,23 +10,28 @@ Pizza.prototype.getCost = function() {
 }
 
 Pizza.prototype.getDescription = function() {
-  var description = this.size + '" pizza with ';
+  var description = this.size + '" pizza';
+  if(this.toppings.length > 0) {
+    description += " with ";
+  }
   for(var i = 0; i < this.toppings.length; i++) {
     description += this.toppings[i];
     if(i + 1 != this.toppings.length) {
       description += ", ";
     }
   }
+  description += " ($" + this.getCost() + ")";
   return description;
 }
 
 // jQuery
 $(document).ready(function() {
 
-  var pizzas = []
-  var selectedToppings = []
+  var pizzas = [];
+  var selectedToppings = [];
 
   $("button#add-topping").click(function() {
+    event.preventDefault();
     var topping = $("#toppings-dropdown").val();
     selectedToppings.push(topping);
     refreshPage();
@@ -46,11 +51,13 @@ $(document).ready(function() {
     for(var i = 0; i < selectedToppings.length; i++) {
       $("ul#toppings-list").append("<li>" + selectedToppings[i] + "</li>");
     }
-    $("ul#pizza-list").empty();
+    $("ol#pizza-list").empty();
+    var totalCost = 0;
     for(var i = 0; i < pizzas.length; i++) {
-      debugger;
       $("ol#pizza-list").append("<li>" + pizzas[i].getDescription() + "</li>");
+      totalCost += pizzas[i].getCost();
     }
+    $("h3#total-cost").text("Total Cost: $" + totalCost);
   }
 
 });
