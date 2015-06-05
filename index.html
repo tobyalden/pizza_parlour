@@ -36,26 +36,39 @@
 
               <br>
 
-              <button type="button" id="add-topping">Add Topping</button>
-              <button type="submit" id="add-pizza">Add Pizza</button>
+              <div class="toppings-list">
+                <br>
+                Selected Toppings:
+                <ul id="toppings-list">
+
+                </ul>
+              </div>
+
+              <br>
+
+              <button type="button" class="btn btn-primary" id="add-topping">Add Topping</button>
+              <button type="submit" class="btn btn-success" id="add-pizza">Add Pizza</button>
 
             </div>
 
           </form>
         </div>
 
-        <div id="result">
-          <label for="toppings-list">Selected Toppings:</label>
-          <ul id="toppings-list">
+        <div class="container order-panel">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+             <h3 class="panel-title">Your order:</h3>
+           </div>
+            <div class="panel-body">
 
-          </ul>
+              <label for="pizza-list">Pizzas:</label>
+              <ol id="pizza-list">
 
-          <label for="pizza-list">Pizzas:</label>
-          <ol id="pizza-list">
+              </ol>
 
-          </ol>
-
-          <h3 id="total-cost">Total Cost:</h3>
+            </div>
+            <div class="panel-footer"><span id="total-cost">Total Cost:</span></div>
+          </div>
         </div>
 
   </body>

@@ -57,7 +57,17 @@ $(document).ready(function() {
       $("ol#pizza-list").append("<li>" + pizzas[i].getDescription() + "</li>");
       totalCost += pizzas[i].getCost();
     }
-    $("h3#total-cost").text("Total Cost: $" + totalCost);
+    if(selectedToppings.length > 0) {
+      $(".toppings-list").slideDown("slow");
+    } else {
+      $(".toppings-list").slideUp("slow");
+    }
+    if(pizzas.length > 0) {
+      $(".order-panel").fadeIn("slow");
+    } else {
+      $(".order-panel").fadeOut("slow");
+    }
+    $("span#total-cost").text("Total Cost: $" + totalCost);
   }
 
 });

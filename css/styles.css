@@ -1,12 +1,17 @@
 body {
-  /*background-image: url(http://shopbase.finetunes.net/shopserver/BinaryCacheServlet?datatype=fc300&albumid=1154057173064);*/
+  background-image: url(http://www.taotv.org/wp-content/uploads/2012/08/pizza.jpg);
   background-size: cover;
 }
 
 .jumbotron {
   background: rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
-div.panel-body {
-  padding-top: 0px;
+.toppings-list {
+  display: none;
+}
+
+.order-panel {
+  display: none;
 }
