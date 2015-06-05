@@ -1,0 +1,12 @@
+body {
+  /*background-image: url(http://shopbase.finetunes.net/shopserver/BinaryCacheServlet?datatype=fc300&albumid=1154057173064);*/
+  background-size: cover;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+div.panel-body {
+  padding-top: 0px;
+}
